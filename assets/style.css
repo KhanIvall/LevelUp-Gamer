@@ -1,0 +1,139 @@
+/* Importar fuente Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+  /* Paleta refinada */
+  --gamer-bg: #0d0d0d;        /* fondo negro */
+  --gamer-card: #1a1a1a;      /* fondo de secciones y cards */
+  --gamer-primary: #00ffcc;   /* acento principal cian */
+  --gamer-secondary: #b366ff; /* acento secundario violeta elegante */
+  --gamer-accent: #39ff14;    /* verde lima sutil */
+  --gamer-text: #e0e0e0;      /* gris claro para texto principal */
+  --gamer-muted: #999999;     /* texto secundario */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--gamer-bg);
+  color: var(--gamer-text);
+  margin: 0;
+}
+
+/* Contenedor general */
+.container {
+  padding: 2rem 1rem;
+}
+
+/* Links */
+a {
+  color: var(--gamer-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--gamer-secondary);
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--gamer-primary);
+  border: none;
+  color: #0d0d0d;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--gamer-secondary);
+  color: #fff;
+  box-shadow: 0 0 12px var(--gamer-secondary);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--gamer-bg);
+  border-bottom: 1px solid var(--gamer-primary);
+}
+
+.navbar-brand {
+  color: var(--gamer-primary) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--gamer-text) !important;
+  font-weight: 500;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--gamer-secondary) !important;
+}
+
+/* Carrusel */
+.carousel-inner img {
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: contain;
+  box-shadow: 0 0 12px rgba(0, 255, 204, 0.3);
+}
+
+/* Cards */
+.card {
+  background-color: var(--gamer-card);
+  border: 1px solid var(--gamer-primary);
+  border-radius: 10px;
+  color: var(--gamer-text);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 255, 204, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--gamer-primary), 0 0 30px var(--gamer-secondary);
+}
+
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: var(--gamer-primary);
+  font-weight: 700;
+}
+
+.card-text {
+  color: var(--gamer-muted);
+}
+
+/* Footer */
+footer {
+  background-color: var(--gamer-card);
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--gamer-primary);
+}
+
+footer h5, footer h6 {
+  color: var(--gamer-primary);
+}
+
+footer p {
+  color: var(--gamer-muted);
+}
+
+footer img {
+  max-height: 24px;
+  margin-right: 0.5rem;
+  transition: transform 0.2s;
+}
+
+footer img:hover {
+  transform: scale(1.2);
+}

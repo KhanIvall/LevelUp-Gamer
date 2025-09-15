@@ -7,6 +7,8 @@
     <title>Home - Level-Up Gamer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Tu hoja de estilos personalizada (después de Bootstrap para sobrescribirlo) -->
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -16,9 +18,9 @@
 
         <div class="row">
             <div class="col-xl-12">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <nav class="navbar navbar-expand-lg bg-body-dark">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html"><img src="assets/images/image1.png" alt="Logo"
+                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo-sin-fondo.png" alt="Logo"
                                 width="40" height="40" class="d-inline-block align-text-top">Level-Up Gamer</a>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,8 +38,15 @@
                                     <a class="nav-link active" aria-current="page" href="tienda.html">Tienda</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="soporte-tecnico.html">Soporte
-                                        Técnico</a>
+                                    <a class="nav-link active" aria-current="page"
+                                        href="soporte-tecnico.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="soporte-tecnico.html">Blogs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page"
+                                        href="soporte-tecnico.html">Contacto</a>
                                 </li>
                             </ul>
 
@@ -62,76 +71,179 @@
     <!--Main-->
     <main>
 
+        <!--Carrusel de imagenes-->
+
+        <section class="container my-4">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/6.png" class="d-block w-100 mx-auto"
+                            style="max-height:500px; object-fit:cover;" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/5.png" class="d-block w-100 mx-auto"
+                            style="max-height:500px; object-fit:cover;" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/4.png" class="d-block w-100 mx-auto"
+                            style="max-height:500px; object-fit:cover;" alt="Imagen 3">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+            <hr>
+
+            <h2>LEVEL UP - GAMER STORE</h2>
+
+            <div class="row">
+
+                <div class="col-l-12">
+
+                    <div class="card" style="width: 100%;">
+
+
+                        <p class="container my-4">Level-Up Gamer es una tienda online dedicada a satisfacer las
+                            necesidades
+                            de los entusiastas de los
+                            videojuegos en Chile. Lanzada hace dos años como respuesta a la creciente demanda durante la
+                            pandemia, Leves-Up Gamer ofrece una amplia gama de productos para gamers, desde consolas y
+                            accesorios hasta computadores y sillas especializadas. Aunque no cuenta con una ubicación
+                            física,
+                            realiza despachos a todo el país</p>
+                        <a href="#" class="btn btn-primary">VER PRODUCTOS</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+        </section>
+
         <section class="container">
 
-            <h2>Noticias</h2>
-            <!--Cards con noticias-->
-            <div class="row">
-
-                <div class="col-xl-6">
-
-                    <div class="card" style="width: 100%;">
-                        <img src="..." class="card-img-top" alt="noticia-1">
+            <h2>Productos:</h2>
+            <!--Cards con productos-->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/images/productos/0100867703773.jpeg" class="card-img-top d-block w-100 mx-auto"
+                            alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Noticia 1</h5>
-                            <p class="card-text">Detalle de la noticia.</p>
-                            <a href="#" class="btn btn-primary">Leer noticia</a>
+                            <h5 class="card-title">DEMON SLAYER THE HINOKAMI CHRONIC 2 NSW</h5>
+                            <p>$64.990</p>
+                            <a href="#" class="btn btn-primary">COMPRAR</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-xl-6">
-                    <div class="card" style="width: 100%;">
-                        <img src="..." class="card-img-top" alt="noticia-2">
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/images/productos/1_1753195543000.webp" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Noticia 2</h5>
-                            <p class="card-text">Detalle de la noticia.</p>
-                            <a href="#" class="btn btn-primary">Leer noticia</a>
+                            <h5 class="card-title">Hunter x Hunter Nen x Impact Switch</h5>
+                            <p>$62.990</p>
+                            <a href="#" class="btn btn-primary">COMPRAR</a>
                         </div>
                     </div>
                 </div>
-
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/images/productos/1_1753198245000.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Shadow Labyrinth Secret Edition Switch</h5>
+                            <p>$67.990</p>
+                            <a href="#" class="btn btn-primary">COMPRAR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/images/productos/710425653612-01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">NBA 2K26 NSW</h5>
+                            <p>$52.990</p>
+                            <a href="#" class="btn btn-primary">COMPRAR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/images/productos/8886419379539-1.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">AUDIFONO BLACKSHARK V2 X WHITE</h5>
+                            <p>$49.990</p>
+                            <a href="#" class="btn btn-primary">COMPRAR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/images/productos/8886419379867-01.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">AUDIFONO BLACKSHARK V2 X WHITE</h5>
+                            <p>$49.990</p>
+                            <a href="#" class="btn btn-primary">COMPRAR</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <br>
-
-            <h2>Blogs</h2>
-            <!--Cards con blogs-->
-            <div class="row">
-
-                <div class="col-xl-6">
-
-                    <div class="card" style="width: 100%;">
-                        <img src="..." class="card-img-top" alt="blog-1">
-                        <div class="card-body">
-                            <h5 class="card-title">Blog 1</h5>
-                            <p class="card-text">Detalle sobre el blog.</p>
-                            <a href="#" class="btn btn-primary">Leer blog</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6">
-                    <div class="card" style="width: 100%;">
-                        <img src="..." class="card-img-top" alt="blog-2">
-                        <div class="card-body">
-                            <h5 class="card-title">Blog 2</h5>
-                            <p class="card-text">Detalle de el blog.</p>
-                            <a href="#" class="btn btn-primary">Leer blog</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            
 
         </section>
 
 
     </main>
 
-    <footer>
+    <footer class="container my-4">
+        <div class="row align-items-start">
+            <!-- Columna izquierda: logo + RRSS -->
+            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                <!-- Logo principal -->
+                <img src="assets/images/logo-sin-fondo.png" alt="Logo de la tienda" class="mb-3"
+                    style="max-height:120px;">
 
+                <!-- Redes sociales -->
+                <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                    <a href="#"><img src="assets/images/icon/1.png" alt="Facebook" style="max-height:24px;"></a>
+                    <a href="#"><img src="assets/images/icon/2.png" alt="Instagram" style="max-height:24px;"></a>
+                    <a href="#"><img src="assets/images/icon/3.png" alt="X" style="max-height:24px;"></a>
+                </div>
+            </div>
+
+            <!-- Columna derecha: información -->
+            <div class="col-md-8">
+                <h5 class="fw-bold mb-2">Contacto</h5>
+                <p class="mb-1">📍 Dirección: Calle Ejemplo 123, Ciudad</p>
+                <p class="mb-1">📞 Teléfono: +56 9 1234 5678</p>
+                <p class="mb-3">✉️ Correo: contacto@mitienda.com</p>
+
+                <h6 class="fw-bold mb-2">Horario de Atención</h6>
+                <p class="mb-3">Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+
+                <h6 class="fw-bold mb-2">Canales de Atención</h6>
+                <p class="mb-0">Atención vía WhatsApp, correo electrónico y redes sociales.</p>
+            </div>
+        </div>
     </footer>
+
 
     <!--Instalación de Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
