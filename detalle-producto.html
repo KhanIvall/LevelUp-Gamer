@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Level-Up Gamer</title>
+    <title>Detalle - Catan Catan Energías - Level-Up Gamer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Tu hoja de estilos personalizada (después de Bootstrap para sobrescribirlo) -->
@@ -70,49 +70,89 @@
     <!--Main-->
     <main>
 
-        <!-- ================== SECCIÓN DE CONTACTO ================== -->
+        <!-- ================== DETALLE DE PRODUCTO ================== -->
         <section class="container my-5">
-            <!-- Logo centrado -->
-            <div class="text-center mb-3">
-                <img src="assets/images/logo-sin-fondo.png" alt="Logo de la tienda" class="img-fluid"
-                    style="max-height:150px;">
-            </div>
-            <h2 class="text-center text-gradient mb-4">Contáctanos</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="border rounded-3 p-4 bg-dark text-light shadow-lg">
+            <div class="row g-5 align-items-center">
 
-                        <form>
-                            <!-- Nombre -->
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre Completo:</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
+                <!-- Carrusel de imágenes -->
+                <div class="col-md-6">
+
+                    <div id="productCarousel" class="carousel slide shadow-lg rounded" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="assets/images/productos/catan.jpg" class="d-block w-100 square-img"
+                                    alt="Producto imagen 1">
                             </div>
-
-                            <!-- Correo -->
-                            <div class="mb-3">
-                                <label for="correo" class="form-label">Correo:</label>
-                                <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com">
+                            <div class="carousel-item">
+                                <img src="assets/images/productos/catan-2.jpg" class="d-block w-100 square-img"
+                                    alt="Producto imagen 2">
                             </div>
-
-                            <!-- Mensaje -->
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje:</label>
-                                <textarea class="form-control" id="mensaje" rows="4"
-                                    placeholder="Escribe tu mensaje..."></textarea>
+                            <div class="carousel-item">
+                                <img src="assets/images/productos/catan-3.jpg" class="d-block w-100 square-img"
+                                    alt="Producto imagen 3">
                             </div>
+                        </div>
+                       
 
-                            <!-- Botones -->
-                            <div class="d-flex justify-content-end gap-2">
-                                <button type="reset" class="btn btn-outline-light">Limpiar</button>
-                                <button type="submit" class="btn btn-success">Enviar</button>
-                            </div>
-                        </form>
-
-                    </div>
+                    <!-- Controles -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
             </div>
+
+            <!-- Información del producto -->
+            <div class="col-md-6 text-light">
+                <h1 class="text-gradient mb-3">Catan Energías
+                </h1>
+                <p class="fs-5 fw-bold text-success">$39.990</p>
+
+                <p class="mb-3">El siglo XXI ha llegado a la isla de Catan. Atrás queda la sociedad agraria fundada
+                    por colonos vikingos. Además de los recursos tradicionales, los habitantes de Catan necesitan
+                    energía para mantener el crecimiento y la prosperidad de su sociedad. La contaminación por
+                    combustibles fósiles es una amenaza creciente, que causa desastres naturales e inhibe la
+                    producción de recursos. Hay tecnologías energéticas nuevas y más limpias disponibles, pero su
+                    construcción es más cara. Los jugadores deberán decidir si invierten en las nuevas energías o si
+                    optan por seguir la ruta de los combustibles fósiles más económicos, arriesgándose a
+                    desencadenar un desastre prematuro para toda la isla. ¡La elección y la responsabilidad son
+                    tuyas!
+
+                    Diseñado por Klaus y Benjamin Teuber, Catan Energías cuenta con ilustraciones de Ian O’Toole.
+                    Permite partidas para 3 o 4 jugadores, a partir de 12 años, de unos 90 minutos de duración. El
+                    objetivo del juego es alcanzar 10 puntos de victoria o ser el jugador con más plantas de energía
+                    renovable construidas, si se han agotado los discos de evento. ¡Prepárate para unas partidas
+                    electrizantes!
+
+                    Catan Energías toma como base las mecánicas del Catan clásico, pero lleva la experiencia de
+                    juego a otro nivel. Al principio de cada turno, los jugadores sacarán discos de evento de una
+                    bolsa y los colocarán en su marcador correspondiente en el tablero. Una vez el marcador esté
+                    completo, se desencadenarán los eventos, que afectarán la partida de formas distintas,
+                    bloqueando recursos o penalizando a ciertos jugadores.</p>
+
+                <ul class="list-unstyled mb-4">
+                    <h6>Especificaciones</h6>
+                    
+                    <li>✅ Editor <strong>Kosmos</strong> </li>
+                    <li>✅ Author <strong>Klaus Teuber, Benjamin Teuber</strong></li>
+                    <li>✅  Mecánicas <strong>Comercio, Conexiones, Negociación</strong></li>
+                    <li>✅ <strong>Tipo de Jugador</strong> Aficionado, Esporádico, Familiar, Habitual, Jugón, Sociable</li>
+                </ul>
+
+                <!-- Botones -->
+                <div class="d-flex gap-3">
+                    <button class="btn btn-outline-info flex-grow-1">Añadir al Carrito</button>
+                    <button class="btn btn-success flex-grow-1">Comprar Ahora</button>
+                </div>
+            </div>
+
+            </div>
         </section>
+
 
 
     </main>
@@ -149,56 +189,7 @@
         </div>
     </footer>
 
-    <!--Bloque de JavaScript-->
-    <script>
 
-        //Funciones para validar los datos ingresados
-        function validarNombre(nombre) {
-            console.log("\nSe valida el nombre ingresado.");
-
-            if (nombre == '') {
-                document.getElementById('errorNombreVacio').style.display = 'block';
-                return false;
-            } else {
-                document.getElementById('errorNombreVacio').style.display = 'none';
-                return true;
-            }
-        }
-
-        function validarCorreoValido(correo) {
-            console.log("\nSe valida el correo ingresado.");
-            var regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            if (!regexCorreo.test(correo)) {
-                document.getElementById('errorCorreoValido').style.display = 'block';
-                return false;
-            } else {
-                document.getElementById('errorCorreoValido').style.display = 'none';
-                return true;
-            }
-        }
-
-        function validarCorreoVacio(correo) {
-            console.log("\nSe valida que se ingrese algún correo.");
-
-            if (correo == '') {
-                document.getElementById('errorCorreoVacio').style.display = 'block';
-                return false;
-            } else {
-                document.getElementById('errorCorreoVacio').style.display = 'none';
-                return true;
-            }
-        }
-
-
-
-        //Función para limpiar los datos ingresados
-        function limpiarDatos() {
-            document.getElementById('nombre').value = '';
-            document.getElementById('correo').value = '';
-            document.getElementById('contrasenna1').value = '';
-            document.getElementById('contrasenna2').value = '';
-        }
 
 
 

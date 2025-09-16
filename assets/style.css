@@ -137,3 +137,96 @@ footer img {
 footer img:hover {
   transform: scale(1.2);
 }
+ /* Inputs oscuros */
+.form-control {
+  background-color: #1a1a1a; /* fondo negro/oscuro */
+  color: #e0e0e0;            /* texto gris claro */
+  border: 1px solid #00ffcc; /* borde cian neón */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: #1a1a1a;  /* mantiene fondo oscuro al enfocar */
+  color: #ffffff;
+  border-color: #b366ff;      /* borde violeta al enfocar */
+  box-shadow: 0 0 8px #b366ff;
+}
+.form-control::placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
+
+/* Títulos con degradado gamer */
+.text-gradient {
+  background: linear-gradient(90deg, #00ffcc, #b366ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Cards de noticias */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+}
+
+/* Formulario */
+form .form-control {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: #e0e0e0;
+}
+form .form-control:focus {
+  border-color: #00ffcc;
+  box-shadow: 0 0 8px #00ffcc;
+}
+
+/* ==== Detalle de producto ==== */
+.text-gradient {
+  background: linear-gradient(90deg, #00f7ff, #ff00f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.carousel-inner img {
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.btn-success {
+  background: linear-gradient(90deg, #00ff88, #00bb55);
+  border: none;
+  transition: 0.3s;
+}
+.btn-success:hover {
+  background: linear-gradient(90deg, #00bb55, #007733);
+}
+
+.btn-outline-info {
+  border: 2px solid #00e0ff;
+  color: #00e0ff;
+  transition: 0.3s;
+}
+.btn-outline-info:hover {
+  background: #00e0ff;
+  color: #111;
+}
+/* Forzar formato cuadrado al carrusel */
+.square-img {
+  aspect-ratio: 1 / 1; /* cuadrado perfecto */
+  width: 100%;
+  object-fit: cover;   /* recorta sin deformar */
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}

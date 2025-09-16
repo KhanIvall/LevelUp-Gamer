@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN LEVEL-UP </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/style-admin.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-light">
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-lg py-3">
+        <div class="container-fluid">
+            
+            <!-- Botón colapsable -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-neon active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-neon" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-neon" href="#">Accesos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-neon" href="#">Descargar</a>
+                    </li>
+                </ul>
+
+                <!-- Botones de autenticación -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-info">Usuario</button>
+                    <button class="btn btn-success">Salir</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block bg-black sidebar vh-100 p-3">
+                <!-- Logo -->
+                <div class="text-center mb-4">
+                    <img src="assets/images/logo-sin-fondo.png" alt="Logo Tienda Gamer" class="img-fluid mb-2"
+                        style="max-height:80px;">
+                    <h5>OPCIONES</h5>
+                </div>
+
+                <ul class="nav flex-column mt-4">
+                    <li class="nav-item mb-2">
+                        <a class="nav-link nav-link-neon" href="#">📦 Productos</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link nav-link-neon" href="#">🛒 Pedidos</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link nav-link-neon" href="#">👥 Usuarios</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link nav-link-neon" href="#">📊 Estadísticas</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link nav-link-neon" href="#">⚙️ Configuración</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Contenido principal -->
+            <main class="col-md-10 ms-sm-auto px-4">
+                <h3 class="mt-4 mb-4 ">ACCESO RÁPIDO</h3>
+
+                <!-- Tarjetas resumen -->
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card bg-dark border-neon text-center p-3">
+                            <h4 class="text-white">Productos</h4>
+                            <p class="display-6 fw-bold text-neon">120</p>
+                            <a href="#" class="btn btn-neon w-100">Gestionar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-dark border-neon text-center p-3">
+                            <h4 class="text-white">Pedidos</h4>
+                            <p class="display-6 fw-bold text-neon">35</p>
+                            <a href="#" class="btn btn-neon w-100">Ver pedidos</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-dark border-neon text-center p-3">
+                            <h4 class="text-white">Usuarios</h4>
+                            <p class="display-6 fw-bold text-neon">580</p>
+                            <a href="#" class="btn btn-neon w-100">Administrar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-dark border-neon text-center p-3">
+                            <h4 class="text-white">Ingresos</h4>
+                            <p class="display-6 fw-bold text-neon">$4.500.000</p>
+                            <a href="#" class="btn btn-neon w-100">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabla de últimos pedidos -->
+                <div class="mt-5">
+                    <h3 class="mb-3 text-neon">Últimos Pedidos</h3>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover align-middle">
+                            <thead class="table-neon">
+                                <tr>
+                                    <th>ID Pedido</th>
+                                    <th>Cliente</th>
+                                    <th>Estado</th>
+                                    <th>Total</th>
+                                    <th>Fecha</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#1021</td>
+                                    <td class="text-white">Ana Torres</td>
+                                    <td><span class="badge bg-success">Completado</span></td>
+                                    <td class="text-neon">$150.000</td>
+                                    <td>15/09/2025</td>
+                                    <td><button class="btn btn-sm btn-neon">Ver</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#1020</td>
+                                    <td class="text-white">Juan Pérez</td>
+                                    <td><span class="badge bg-warning">Pendiente</span></td>
+                                    <td class="text-neon">$75.000</td>
+                                    <td>14/09/2025</td>
+                                    <td><button class="btn btn-sm btn-neon">Ver</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

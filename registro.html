@@ -7,18 +7,19 @@
     <title>Registro - Level-Up Gamer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Tu hoja de estilos personalizada (después de Bootstrap para sobrescribirlo) -->
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-
     <!--Header. Implementación del Navbar-->
     <header>
 
         <div class="row">
             <div class="col-xl-12">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <nav class="navbar navbar-expand-lg bg-body-dark">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html"><img src="assets/images/image1.png" alt="Logo"
+                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo-sin-fondo.png" alt="Logo"
                                 width="40" height="40" class="d-inline-block align-text-top">Level-Up Gamer</a>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,8 +37,15 @@
                                     <a class="nav-link active" aria-current="page" href="tienda.html">Tienda</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="soporte-tecnico.html">Soporte
-                                        Técnico</a>
+                                    <a class="nav-link active" aria-current="page"
+                                        href="soporte-tecnico.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="soporte-tecnico.html">Blogs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page"
+                                        href="soporte-tecnico.html">Contacto</a>
                                 </li>
                             </ul>
 
@@ -64,14 +72,14 @@
 
         <section class="container">
             <div class="row">
-                <div class="col-lg-12 mt-3 border p-3 rounded-3">
+                <div class="col-lg-12 mt-3 border p-3 rounded-3 bg-body-dark">
 
                     <h1 class="text-center">Registro</h1>
 
                     <!--input nombre-->
                     <div class="mb-3 mt-3">
                         <label for="nombre" class="form-label">Nombre Completo:</label>
-                        <input type="text" class="form-control" id="nombre" aria-describedby="errorNombreVacio">
+                        <input type="text" class="form-control " id="nombre" aria-describedby="errorNombreVacio">
                         <div id="errorNombreVacio" class="form-text" style="color: red; display: none;">* Este campos es
                             obligatorio</div>
                     </div>
@@ -80,9 +88,11 @@
                     <div class="mb-3">
                         <label for="correo" class="form-label">Correo:</label>
                         <div class="tooltip-container">
-                            <input type="email" class="form-control" id="correo" onfocus="infoDescuento()" onblur="infoDescuentoOut()">
+                            <input type="email" class="form-control" id="correo" onfocus="infoDescuento()"
+                                onblur="infoDescuentoOut()">
                         </div>
-                        <div id="infoDescuento" class="form-text" style="color: yellow; display: none;">* Si te registras con un mail de Duoc tienes un 20% de Descuento de por vida.</div>
+                        <div id="infoDescuento" class="form-text" style="color: yellow; display: none;">* Si te
+                            registras con un mail de Duoc tienes un 20% de Descuento de por vida.</div>
                         <div id="errorCorreoVacio" class="form-text" style="color: red; display: none;">* Este campos es
                             obligatorio</div>
                         <div id="errorCorreoValido" class="form-text" style="color: red; display: none;">* El e-mail no
@@ -125,8 +135,36 @@
 
     </main>
 
-    <footer>
+    <footer class="container my-4">
+        <div class="row align-items-start">
+            <!-- Columna izquierda: logo + RRSS -->
+            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                <!-- Logo principal -->
+                <img src="assets/images/logo-sin-fondo.png" alt="Logo de la tienda" class="mb-3"
+                    style="max-height:120px;">
 
+                <!-- Redes sociales -->
+                <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                    <a href="#"><img src="assets/images/icon/1.png" alt="Facebook" style="max-height:24px;"></a>
+                    <a href="#"><img src="assets/images/icon/2.png" alt="Instagram" style="max-height:24px;"></a>
+                    <a href="#"><img src="assets/images/icon/3.png" alt="X" style="max-height:24px;"></a>
+                </div>
+            </div>
+
+            <!-- Columna derecha: información -->
+            <div class="col-md-8">
+                <h5 class="fw-bold mb-2">Contacto</h5>
+                <p class="mb-1">📍 Dirección: Av. Providencia 10225, Santiago</p>
+                <p class="mb-1">📞 Teléfono: +56 9 1234 5678</p>
+                <p class="mb-3">✉️ Correo: contacto@levelup.com</p>
+
+                <h6 class="fw-bold mb-2">Horario de Atención</h6>
+                <p class="mb-3">Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+
+                <h6 class="fw-bold mb-2">Canales de Atención</h6>
+                <p class="mb-0">Atención vía WhatsApp, correo electrónico y redes sociales.</p>
+            </div>
+        </div>
     </footer>
 
     <!--Bloque de JavaScript-->
@@ -198,7 +236,7 @@
             console.log("\nSe valida la fecha de cumpleaños ingresada.");
             var fechaActual = new Date();
             var fechaIngresada = new Date(fecha);
-            if ((fechaActual - fechaIngresada)/ (1000 * 60 * 60 * 24 * 365.25) < 18) {
+            if ((fechaActual - fechaIngresada) / (1000 * 60 * 60 * 24 * 365.25) < 18) {
                 alert("Sólo se permiten mayores de 18 años.");
                 return false;
             } else {

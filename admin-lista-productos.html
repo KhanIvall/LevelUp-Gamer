@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN LEVEL-UP </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/style-admin.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-light">
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-lg py-3">
+        <div class="container-fluid">
+
+            <!-- Botón colapsable -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-neon active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-neon" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-neon" href="#">Accesos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-neon" href="#">Descargar</a>
+                    </li>
+                </ul>
+
+                <!-- Botones de autenticación -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-info">Usuario</button>
+                    <button class="btn btn-success">Salir</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block bg-black sidebar vh-100 p-3">
+                <!-- Logo -->
+                <div class="text-center mb-4">
+                    <img src="assets/images/logo-sin-fondo.png" alt="Logo Tienda Gamer" class="img-fluid mb-2"
+                        style="max-height:80px;">
+                    <h3>OPCIONES</h3>
+                </div>
+
+                <ul class="nav flex-column mt-4">
+                    <li class="nav-item mb-2">
+                        <a class="nav-link nav-link-neon" href="#">📦 Productos</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link nav-link-neon" href="#">🛒 Pedidos</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link nav-link-neon" href="#">👥 Usuarios</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link nav-link-neon" href="#">📊 Estadísticas</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link nav-link-neon" href="#">⚙️ Configuración</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Contenido principal -->
+            <main class="col-md-10 ms-sm-auto px-4">
+
+                <!-- ================== LISTADO DE PRODUCTOS ================== -->
+                <section class="container my-5">
+
+                    <h3 class="mb-4">Listado de Productos</h3>
+
+                    <section class="container my-5">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+
+                            <button class="btn btn-neon">+ Añadir Producto</button>
+                        </div>
+
+                        <!-- Barra de búsqueda y filtros -->
+                        <div class="row mb-3">
+                            <div class="col-md-4 mb-2">
+                                <input type="text" id="searchInput" class="form-control bg-dark text-light"
+                                    placeholder="Buscar producto...">
+                            </div>
+                            <div class="col-md-3 mb-2">
+                                <select id="filterCategory" class="form-select bg-dark text-light">
+                                    <option value="">Todas las categorías</option>
+                                    <option value="Consola">Consola</option>
+                                    <option value="Juegos de mesa">Juegos de mesa</option>
+                                    <option value="Accesorios">Accesorios</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 mb-2">
+                                <button class="btn btn-outline-light w-100" onclick="resetFilters()">Reset</button>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-dark table-hover align-middle">
+                                <thead class="table-neon">
+                                    <tr>
+                                        <th>SKU</th>
+                                        <th>Producto</th>
+                                        <th>Categoría</th>
+                                        <th>Stock</th>
+                                        <th>Precio</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>GAM001</td>
+                                        <td>Cyberpunk 2077 PS5</td>
+                                        <td>Consola</td>
+                                        <td>15</td>
+                                        <td>$59.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAM002</td>
+                                        <td>Monopoly Edición Gamer</td>
+                                        <td>Juegos de mesa</td>
+                                        <td>25</td>
+                                        <td>$29.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAM003</td>
+                                        <td>Auriculares RGB Gamer Pro</td>
+                                        <td>Accesorios</td>
+                                        <td>40</td>
+                                        <td>$89.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAM004</td>
+                                        <td>FIFA 25 Xbox</td>
+                                        <td>Consola</td>
+                                        <td>20</td>
+                                        <td>$69.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAM005</td>
+                                        <td>Catan Edición Gamer</td>
+                                        <td>Juegos de mesa</td>
+                                        <td>30</td>
+                                        <td>$34.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAM006</td>
+                                        <td>Teclado Mecánico RGB</td>
+                                        <td>Accesorios</td>
+                                        <td>50</td>
+                                        <td>$79.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAM007</td>
+                                        <td>Mario Kart 9 Switch</td>
+                                        <td>Consola</td>
+                                        <td>12</td>
+                                        <td>$59.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAM008</td>
+                                        <td>Jenga Gamer Edition</td>
+                                        <td>Juegos de mesa</td>
+                                        <td>22</td>
+                                        <td>$19.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAM009</td>
+                                        <td>Mouse Gamer RGB</td>
+                                        <td>Accesorios</td>
+                                        <td>35</td>
+                                        <td>$49.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAM010</td>
+                                        <td>Resident Evil 9 PS5</td>
+                                        <td>Consola</td>
+                                        <td>18</td>
+                                        <td>$69.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>GAM011</td>
+                                        <td>Call of Duty 2025 Xbox</td>
+                                        <td>Consola</td>
+                                        <td>20</td>
+                                        <td>$64.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>GAM012</td>
+                                        <td>Arkham Horror Board Game</td>
+                                        <td>Juegos de mesa</td>
+                                        <td>15</td>
+                                        <td>$39.990</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-neon">Editar</button>
+                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                   
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
