@@ -74,40 +74,102 @@
 
                     <h1 class="text-center">Registro</h1>
 
+                    <!--input rut-->
+                    <div class="mb-3">
+                        <label for="userRun" class="form-label">RUN: <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="userRun" maxlength="9" minlength="7" required
+                            placeholder="Sin puntos ni guión. Ej: 19011022K">
+                        <div id="errorRutVacio" class="form-text" style="color: red; display: none;">* Este campos es
+                            obligatorio</div>
+                        <div id="errorRutInvalido" class="form-text" style="color: red; display: none;">* El formato del
+                            rut no es correcto</div>
+                    </div>
+
                     <!--input nombre-->
                     <div class="mb-3 mt-3">
-                        <label for="nombre" class="form-label">Nombre Completo:</label>
-                        <input type="text" class="form-control " id="nombre" aria-describedby="errorNombreVacio">
+                        <label for="nombre" class="form-label">Nombre: <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control " id="nombre" maxlength="50" required
+                            placeholder="Ingrese su nombre aquí">
                         <div id="errorNombreVacio" class="form-text" style="color: red; display: none;">* Este campos es
+                            obligatorio</div>
+                    </div>
+
+                    <!--input apellidos-->
+                    <div class="mb-3 mt-3">
+                        <label for="apellidos" class="form-label">Apellidos: <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control " id="apellidos" maxlength="100" required
+                            placeholder="Ingrese sus apellidos aquí">
+                        <div id="errorApellidoVacio" class="form-text" style="color: red; display: none;">* Este campos
+                            es
                             obligatorio</div>
                     </div>
 
                     <!--input correo-->
                     <div class="mb-3">
-                        <label for="correo" class="form-label">Correo:</label>
+                        <label for="correo" class="form-label">Correo: <span class="text-danger">*</span></label>
                         <div class="tooltip-container">
                             <input type="email" class="form-control" id="correo" onfocus="infoDescuento()"
-                                onblur="infoDescuentoOut()">
+                                onblur="infoDescuentoOut()" maxlength="100" required
+                                placeholder="Ingrese su e-mail aquí">
                         </div>
                         <div id="infoDescuento" class="form-text" style="color: yellow; display: none;">* Si te
                             registras con un mail de Duoc tienes un 20% de Descuento de por vida.</div>
                         <div id="errorCorreoVacio" class="form-text" style="color: red; display: none;">* Este campos es
                             obligatorio</div>
                         <div id="errorCorreoValido" class="form-text" style="color: red; display: none;">* El e-mail no
-                            es válido</div>
+                            es válido. Sólo se permiten mails @duoc.cl, @profesor.duoc.cl o @gmail.com</div>
                     </div>
 
-                    <!--input fecha de cumpleaños-->
+                    <!--input fecha de nacimiento-->
                     <div class="mb-3 mt-3">
-                        <label for="fechaCumpleannos" class="form-label">Fecha de Cumpleaños:</label>
+                        <label for="fechaCumpleannos" class="form-label">Fecha de Nacimiento:</label>
                         <input type="date" class="form-control" id="fechaCumpleannos">
-                        <div id="errorFechaVacia" class="form-text" style="color: red; display: none;">* Este campo es obligatorio</div>
+                    </div>
+
+                    <!-- Tipo de usuario -->
+                    <div class="mb-3">
+                        <label for="userRole" class="form-label">Tipo de Usuario <span
+                                class="text-danger">*</span></label>
+                        <select class="form-select" id="userRole" required>
+                            <option value="">Seleccione un rol</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Cliente">Cliente</option>
+                            <option value="Vendedor">Vendedor</option>
+                        </select>
+                    </div>
+
+                    <!-- Región y Comuna -->
+                    <div class="mb-3 row">
+                        <div class="col-md-6 mb-2">
+                            <label for="userRegion" class="form-label">Región: <span
+                                    class="text-danger">*</span></label>
+                            <select class="form-select" id="userRegion" required></select>
+                        </div>
+
+                        <div class="col-md-6 mb-2">
+                            <label for="userComuna" class="form-label">Comuna: <span
+                                    class="text-danger">*</span></label>
+                            <select class="form-select" id="userComuna" required></select>
+                        </div>
+                    </div>
+
+                    <!-- Dirección -->
+                    <div class="mb-3">
+                        <label for="userAddress" class="form-label">Dirección: <span
+                                class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="userAddress" maxlength="300" required
+                            placeholder="Igrese su dirección aquí">
+                        <div id="errorDireccionVacia" class="form-text" style="color: red; display: none;">* Este
+                            campos es
+                            obligatorio</div>
                     </div>
 
                     <!--input contraseña-->
                     <div class="mb-3">
-                        <label for="contrasenna1" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control" id="contrasenna1" aria-describedby="emailHelp">
+                        <label for="contrasenna1" class="form-label">Contraseña: <span
+                                class="text-danger">*</span></label>
+                        <input type="password" class="form-control" id="contrasenna1"
+                            placeholder="**************">
                         <div id="errorContrasennaVacia" class="form-text" style="color: red; display: none;">* Este
                             campos es
                             obligatorio</div>
@@ -115,8 +177,10 @@
 
                     <!--input repita contraseña-->
                     <div class="mb-3">
-                        <label for="contrasenna2" class="form-label">Repita Contraseña:</label>
-                        <input type="password" class="form-control" id="contrasenna2" aria-describedby="emailHelp">
+                        <label for="contrasenna2" class="form-label">Repita Contraseña: <span
+                                class="text-danger">*</span></label>
+                        <input type="password" class="form-control" id="contrasenna2"
+                            placeholder="**************">
                         <div id="errorContrasennaNoCoincide" class="form-text" style="color: red; display: none;">* Las
                             contraseñas no coinciden</div>
                     </div>
@@ -170,6 +234,32 @@
     <script>
 
         //Funciones para validar los datos ingresados
+        function validarRutVacio(rut) {
+            console.log("\nSe validaque el rut sea ingresado.");
+
+            if (rut == '') {
+                document.getElementById('errorRutVacio').style.display = 'block';
+                return false;
+            } else {
+                document.getElementById('errorRutVacio').style.display = 'none';
+                return true;
+            }
+        }
+
+        function validarRutValido(rut) {
+            console.log("\nSe validaque el rut sea válido.");
+
+            const regexRut = /^[0-9]+[0-9kK]$/;
+
+            if (regexRut.test(rut)) {
+                document.getElementById('errorRutInvalido').style.display = 'none';
+                return true;
+            } else {
+                document.getElementById('errorRutInvalido').style.display = 'block';
+                return false;
+            }
+        }
+
         function validarNombre(nombre) {
             console.log("\nSe valida el nombre ingresado.");
 
@@ -182,16 +272,28 @@
             }
         }
 
-        function validarCorreoValido(correo) {
-            console.log("\nSe valida el correo ingresado.");
-            var regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        function validarApellido(ap) {
+            console.log("\nSe valida los apellidos ingresado.");
 
-            if (!regexCorreo.test(correo)) {
-                document.getElementById('errorCorreoValido').style.display = 'block';
+            if (ap == '') {
+                document.getElementById('errorApellidoVacio').style.display = 'block';
                 return false;
             } else {
+                document.getElementById('errorApellidoVacio').style.display = 'none';
+                return true;
+            }
+        }
+
+        function validarCorreoValido(correo) {
+            console.log("\nSe valida el correo ingresado.");
+            var regexCorreo = /^[a-zA-Z0-9._%+-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/;
+
+            if (regexCorreo.test(correo)) {
                 document.getElementById('errorCorreoValido').style.display = 'none';
                 return true;
+            } else {
+                document.getElementById('errorCorreoValido').style.display = 'block';
+                return false;
             }
         }
 
@@ -203,6 +305,18 @@
                 return false;
             } else {
                 document.getElementById('errorCorreoVacio').style.display = 'none';
+                return true;
+            }
+        }
+
+        function validarDireccionVacia(dir) {
+            console.log("\nSe valida que se ingrese algúna dirección.");
+
+            if (dir == '') {
+                document.getElementById('errorDireccionVacia').style.display = 'block';
+                return false;
+            } else {
+                document.getElementById('errorDireccionVacia').style.display = 'none';
                 return true;
             }
         }
@@ -231,18 +345,6 @@
             }
         }
 
-        function validarFechaVacia(fecha) {
-            console.log("\nSe valida que se ingrese una fecha de cumpleaños.");
-
-            if (fecha == '') {
-                document.getElementById('errorFechaVacia').style.display = 'block';
-                return false;
-            } else {
-                document.getElementById('errorFechaVacia').style.display = 'none';
-                return true;
-            }
-        }
-
         function validarFechaCumpleannos(fecha) {
             console.log("\nSe valida la fecha de cumpleaños ingresada.");
             var fechaActual = new Date();
@@ -258,14 +360,28 @@
         function registrarUsuario() {
             console.log("\nSe validan datos para registrar al usuario.");
             // Obtener los valores de los campos de entrada
+            const rut = document.getElementById('userRun').value;
             const nombre = document.getElementById('nombre').value;
+            const apellidos = document.getElementById('apellidos').value;
             const correo = document.getElementById('correo').value;
             const fechaCumpleannos = document.getElementById('fechaCumpleannos').value;
             const contrasenna1 = document.getElementById('contrasenna1').value;
             const contrasenna2 = document.getElementById('contrasenna2').value;
+            const direccion = document.getElementById('userAddress').value;
+
+            validarRutVacio(rut);
+            validarRutValido(rut);
+            validarNombre(nombre);
+            validarApellido(apellidos);
+            validarCorreoVacio(correo);
+            validarCorreoValido(correo);
+            validarFechaCumpleannos(fechaCumpleannos);
+            validarDireccionVacia(direccion);
+            validarContrasennaVacia(contrasenna1);
+            validarContrasennas(contrasenna1, contrasenna2);
 
             //Validaciones campos ingresados
-            if (validarNombre(nombre) && validarCorreoVacio(correo) && validarCorreoValido(correo) && validarFechaVacia(fechaCumpleannos) && validarFechaCumpleannos(fechaCumpleannos) && validarContrasennaVacia(contrasenna1) && validarContrasennas(contrasenna1, contrasenna2)) {
+            if (validarRutVacio(rut) && validarRutValido(rut) && validarNombre(nombre) && validarApellido(apellidos) && validarCorreoVacio(correo) && validarCorreoValido(correo) && validarFechaCumpleannos(fechaCumpleannos) && validarDireccionVacia(direccion) && validarContrasennaVacia(contrasenna1) && validarContrasennas(contrasenna1, contrasenna2)) {
                 console.log('Nombre:', nombre);
                 console.log('Correo:', correo);
                 console.log('Contraseña:', contrasenna1);
