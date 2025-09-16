@@ -7,12 +7,12 @@
     <title>Productos - Level-Up Gamer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Tu hoja de estilos personalizada (después de Bootstrap para sobrescribirlo) -->
+    <!-- Bootstrap-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="bg-dark text-light">
-    <!--Header. Implementación del Navbar-->
+    <!--Navbar-->
     <header>
         <div class="row">
             <div class="col-xl-12">
@@ -83,7 +83,8 @@
                             </h2>
                             <div id="collapsePrice" class="accordion-collapse collapse">
                                 <div class="accordion-body">
-                                    <input type="range" class="form-range" min="0" max="200000" step="1000" id="filterPrice">
+                                    <input type="range" class="form-range" min="0" max="200000" step="1000"
+                                        id="filterPrice">
                                     <div class="d-flex justify-content-between small">
                                         <span>$0</span><span>$200.000</span>
                                     </div>
@@ -94,7 +95,8 @@
                         <div class="accordion-item bg-dark text-light border-0">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed bg-dark text-light fw-bold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseAvailability">Disponibilidad</button>
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAvailability">Disponibilidad</button>
                             </h2>
                             <div id="collapseAvailability" class="accordion-collapse collapse">
                                 <div class="accordion-body">
@@ -117,10 +119,15 @@
                             </h2>
                             <div id="collapsePlatform" class="accordion-collapse collapse">
                                 <div class="accordion-body">
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="ps5"><label class="form-check-label" for="ps5">PS5</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="xbox"><label class="form-check-label" for="xbox">Xbox</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="switch"><label class="form-check-label" for="switch">Nintendo Switch</label></div>
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="pc"><label class="form-check-label" for="pc">PC</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox"
+                                            id="ps5"><label class="form-check-label" for="ps5">PS5</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox"
+                                            id="xbox"><label class="form-check-label" for="xbox">Xbox</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox"
+                                            id="switch"><label class="form-check-label" for="switch">Nintendo
+                                            Switch</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox"
+                                            id="pc"><label class="form-check-label" for="pc">PC</label></div>
                                 </div>
                             </div>
                         </div>
@@ -134,268 +141,286 @@
             <!-- Sección de Productos -->
             <section class="col-md-9 col-lg-10">
                 <div class="text-center mb-4">
-                    <img src="assets/images/logo-sin-fondo.png" alt="Logo de la tienda" class="img-fluid" style="max-height:150px;">
+                    <img src="assets/images/logo-sin-fondo.png" alt="Logo de la tienda" class="img-fluid"
+                        style="max-height:150px;">
                 </div>
                 <h2 class="text-center text-gradient mb-4">Productos Destacados</h2>
-                
-<div class="row g-4">
-    <!-- Card 1 -->
-    <div class="col-12 col-md-4 product-card" data-category="mesa" data-price="29990" data-stock="true" data-offer="false" data-platform="mesa">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/catan.jpg" class="card-img-top" alt="Catan Energías"
-                style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Catan Energías</h5>
-                <p class="card-text small">Tipo de Jugador Aficionado, Esporádico, Familiar, Habitual,
-                    Jugón, Sociable. Escenario de Juego: Cena de parejas, Sobremesa, Visita sobrinos.
-                </p>
-                <p class="fw-bold text-success">$29.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="detalle-producto.html" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('Catan Energías', 29990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Card 2 -->
-    <div class="col-12 col-md-4 product-card" data-category="mesa" data-price="59990" data-stock="true" data-offer="false" data-platform="mesa">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/Nunatak.jpg" class="card-img-top" alt="Nunatak"
-                style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Nunatak</h5>
-                <p class="card-text small">Juego para 1-4 jugadores, a partir de 10 años. Construye
-                    secciones del templo con bloques de hielo para obtener puntos.</p>
-                <p class="fw-bold text-success">$59.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('Nunatak', 59990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-12 col-md-4 product-card" data-category="mesa" data-price="29990" data-stock="true"
+                        data-offer="false" data-platform="mesa">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/catan.jpg" class="card-img-top" alt="Catan Energías"
+                                style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Catan Energías</h5>
+                                <p class="card-text small">Tipo de Jugador Aficionado, Esporádico, Familiar, Habitual,
+                                    Jugón, Sociable. Escenario de Juego: Cena de parejas, Sobremesa, Visita sobrinos.
+                                </p>
+                                <p class="fw-bold text-success">$29.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="detalle-producto.html" class="btn btn-outline-info flex-grow-1">Ver
+                                        Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('Catan Energías', 29990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 3 -->
-    <div class="col-12 col-md-4 product-card" data-category="juegos" data-price="59990" data-stock="true" data-offer="false" data-platform="switch">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/1_1753195543000.webp" class="card-img-top"
-                alt="Hunter x Hunter Nen x Impact Switch" style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Hunter x Hunter Nen x Impact Switch</h5>
-                <p class="card-text small">¡El primer juego de lucha HUNTER×HUNTER a gran escala!</p>
-                <p class="fw-bold text-success">$59.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('Hunter x Hunter Nen x Impact Switch', 59990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <!-- Card 2 -->
+                    <div class="col-12 col-md-4 product-card" data-category="mesa" data-price="59990" data-stock="true"
+                        data-offer="false" data-platform="mesa">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/Nunatak.jpg" class="card-img-top" alt="Nunatak"
+                                style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Nunatak</h5>
+                                <p class="card-text small">Juego para 1-4 jugadores, a partir de 10 años. Construye
+                                    secciones del templo con bloques de hielo para obtener puntos.</p>
+                                <p class="fw-bold text-success">$59.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('Nunatak', 59990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 4 -->
-    <div class="col-12 col-md-4 product-card" data-category="juegos" data-price="69990" data-stock="true" data-offer="true" data-platform="switch">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/710425653612-01.jpg" class="card-img-top"
-                alt="NBA 2K26 NSW" style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">NBA 2K26 NSW</h5>
-                <p class="card-text small">¡El primer juego de NBA a gran escala!</p>
-                <p class="fw-bold text-success">$69.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('NBA 2K26 NSW', 69990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <!-- Card 3 -->
+                    <div class="col-12 col-md-4 product-card" data-category="juegos" data-price="59990"
+                        data-stock="true" data-offer="false" data-platform="switch">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/1_1753195543000.webp" class="card-img-top"
+                                alt="Hunter x Hunter Nen x Impact Switch" style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Hunter x Hunter Nen x Impact Switch</h5>
+                                <p class="card-text small">¡El primer juego de lucha HUNTER×HUNTER a gran escala!</p>
+                                <p class="fw-bold text-success">$59.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('Hunter x Hunter Nen x Impact Switch', 59990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 5 -->
-    <div class="col-12 col-md-4 product-card" data-category="juegos" data-price="79990" data-stock="true" data-offer="false" data-platform="switch">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/0100867703773.jpeg" class="card-img-top"
-                alt="DEMON SLAYER THE HINOKAMI CHRONIC 2 NSW" style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">DEMON SLAYER THE HINOKAMI CHRONIC 2 NSW</h5>
-                <p class="card-text small">Disfruta de DEMON SLAYER THE HINOKAMI CHRONIC 2 en Nintendo Switch.</p>
-                <p class="fw-bold text-success">$79.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('DEMON SLAYER THE HINOKAMI CHRONIC 2 NSW', 79990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <!-- Card 4 -->
+                    <div class="col-12 col-md-4 product-card" data-category="juegos" data-price="69990"
+                        data-stock="true" data-offer="true" data-platform="switch">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/710425653612-01.jpg" class="card-img-top"
+                                alt="NBA 2K26 NSW" style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">NBA 2K26 NSW</h5>
+                                <p class="card-text small">¡El primer juego de NBA a gran escala!</p>
+                                <p class="fw-bold text-success">$69.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('NBA 2K26 NSW', 69990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 6 -->
-    <div class="col-12 col-md-4 product-card" data-category="juegos" data-price="39990" data-stock="true" data-offer="false" data-platform="switch">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/1_1753198245000.webp" class="card-img-top"
-                alt="Shadow Labyrinth Secret Edition Switch" style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Shadow Labyrinth Secret Edition Switch</h5>
-                <p class="card-text small">Shadow Labyrinth Secret Edition Switch.</p>
-                <p class="fw-bold text-success">$39.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('Shadow Labyrinth Secret Edition Switch', 39990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <!-- Card 5 -->
+                    <div class="col-12 col-md-4 product-card" data-category="juegos" data-price="79990"
+                        data-stock="true" data-offer="false" data-platform="switch">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/0100867703773.jpeg" class="card-img-top"
+                                alt="DEMON SLAYER THE HINOKAMI CHRONIC 2 NSW" style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">DEMON SLAYER THE HINOKAMI CHRONIC 2 NSW</h5>
+                                <p class="card-text small">Disfruta de DEMON SLAYER THE HINOKAMI CHRONIC 2 en Nintendo
+                                    Switch.</p>
+                                <p class="fw-bold text-success">$79.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('DEMON SLAYER THE HINOKAMI CHRONIC 2 NSW', 79990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 7 -->
-    <div class="col-12 col-md-4 product-card" data-category="accesorios" data-price="59990" data-stock="true" data-offer="true" data-platform="pc">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/teclado-1.webp" class="card-img-top"
-                alt="TECLADO HUNTSMAN MINI" style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">TECLADO HUNTSMAN MINI MERCURY ENG- RED SWITCH</h5>
-                <p class="card-text small">Switches red, retroiluminación dinámica y construcción metálica.</p>
-                <p class="fw-bold text-success">$59.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('Teclado Mecánico RGB', 59990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <!-- Card 6 -->
+                    <div class="col-12 col-md-4 product-card" data-category="juegos" data-price="39990"
+                        data-stock="true" data-offer="false" data-platform="switch">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/1_1753198245000.webp" class="card-img-top"
+                                alt="Shadow Labyrinth Secret Edition Switch" style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Shadow Labyrinth Secret Edition Switch</h5>
+                                <p class="card-text small">Shadow Labyrinth Secret Edition Switch.</p>
+                                <p class="fw-bold text-success">$39.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('Shadow Labyrinth Secret Edition Switch', 39990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 8 -->
-    <div class="col-12 col-md-4 product-card" data-category="accesorios" data-price="99990" data-stock="true" data-offer="false" data-platform="ps5">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/mandops5azul.webp" class="card-img-top"
-                alt="Control DualSense PS5" style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Control inalámbrico DualSense Chroma Indigo PS5</h5>
-                <p class="card-text small">Control inalámbrico DualSense Chroma Indigo PS5.</p>
-                <p class="fw-bold text-success">$99.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('Control Indigo PS5', 99990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <!-- Card 7 -->
+                    <div class="col-12 col-md-4 product-card" data-category="accesorios" data-price="59990"
+                        data-stock="true" data-offer="true" data-platform="pc">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/teclado-1.webp" class="card-img-top"
+                                alt="TECLADO HUNTSMAN MINI" style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">TECLADO HUNTSMAN MINI MERCURY ENG- RED SWITCH</h5>
+                                <p class="card-text small">Switches red, retroiluminación dinámica y construcción
+                                    metálica.</p>
+                                <p class="fw-bold text-success">$59.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('Teclado Mecánico RGB', 59990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 9 -->
-    <div class="col-12 col-md-4 product-card" data-category="accesorios" data-price="59990" data-stock="true" data-offer="false" data-platform="ps5">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/cargador-mando.webp" class="card-img-top"
-                alt="Cargador PS5" style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Cargador doble para control PS5</h5>
-                <p class="card-text small">Carga tus mandos de PS5 simultáneamente.</p>
-                <p class="fw-bold text-success">$59.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('Cargador PS5', 59990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <!-- Card 8 -->
+                    <div class="col-12 col-md-4 product-card" data-category="accesorios" data-price="99990"
+                        data-stock="true" data-offer="false" data-platform="ps5">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/mandops5azul.webp" class="card-img-top"
+                                alt="Control DualSense PS5" style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Control inalámbrico DualSense Chroma Indigo PS5</h5>
+                                <p class="card-text small">Control inalámbrico DualSense Chroma Indigo PS5.</p>
+                                <p class="fw-bold text-success">$99.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('Control Indigo PS5', 99990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 10 -->
-    <div class="col-12 col-md-4 product-card" data-category="coleccion" data-price="29990" data-stock="true" data-offer="false" data-platform="coleccion">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/funko-1.webp" class="card-img-top" alt="Funko One Piece"
-                style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">POP Moment: One Piece - Roronoa Zoro vs. King Exclusivo</h5>
-                <p class="card-text small">Funko POP Moment exclusivo.</p>
-                <p class="fw-bold text-success">$29.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('POP Roronoa Zoro vs. King', 29990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <!-- Card 9 -->
+                    <div class="col-12 col-md-4 product-card" data-category="accesorios" data-price="59990"
+                        data-stock="true" data-offer="false" data-platform="ps5">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/cargador-mando.webp" class="card-img-top"
+                                alt="Cargador PS5" style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Cargador doble para control PS5</h5>
+                                <p class="card-text small">Carga tus mandos de PS5 simultáneamente.</p>
+                                <p class="fw-bold text-success">$59.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('Cargador PS5', 59990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 11 -->
-    <div class="col-12 col-md-4 product-card" data-category="mesa" data-price="29990" data-stock="true" data-offer="false" data-platform="mesa">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/selva.webp" class="card-img-top" alt="La Selva Prohibida"
-                style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">La Selva Prohibida</h5>
-                <p class="card-text small">Partidas para parejas o grupos de hasta 5 jugadores, a partir de 10 años.</p>
-                <p class="fw-bold text-success">$29.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('La Selva Prohibida', 29990)">Añadir</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <!-- Card 10 -->
+                    <div class="col-12 col-md-4 product-card" data-category="coleccion" data-price="29990"
+                        data-stock="true" data-offer="false" data-platform="coleccion">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/funko-1.webp" class="card-img-top" alt="Funko One Piece"
+                                style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">POP Moment: One Piece - Roronoa Zoro vs. King Exclusivo</h5>
+                                <p class="card-text small">Funko POP Moment exclusivo.</p>
+                                <p class="fw-bold text-success">$29.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('POP Roronoa Zoro vs. King', 29990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Card 12 -->
-    <div class="col-12 col-md-4 product-card" data-category="coleccion" data-price="99990" data-stock="true" data-offer="false" data-platform="coleccion">
-        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
-            <img src="assets/images/productos/figura.jpeg" class="card-img-top"
-                alt="FIGURA GREAT MAZINGER" style="height:200px; object-fit:cover;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title">FIGURA GREAT MAZINGER Z 12\" FULL ACTION</h5>
-                <p class="card-text small">Figura articulada de colección.</p>
-                <p class="fw-bold text-success">$99.990</p>
-                <div class="d-flex justify-content-between mt-auto gap-2">
-                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
-                    <button class="btn btn-success flex-grow-1"
-                        onclick="addToCart('FIGURA GREAT MAZINGER', 99990)">Añadir</button>
+                    <!-- Card 11 -->
+                    <div class="col-12 col-md-4 product-card" data-category="mesa" data-price="29990" data-stock="true"
+                        data-offer="false" data-platform="mesa">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/selva.webp" class="card-img-top" alt="La Selva Prohibida"
+                                style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">La Selva Prohibida</h5>
+                                <p class="card-text small">Partidas para parejas o grupos de hasta 5 jugadores, a partir
+                                    de 10 años.</p>
+                                <p class="fw-bold text-success">$29.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('La Selva Prohibida', 29990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 12 -->
+                    <div class="col-12 col-md-4 product-card" data-category="coleccion" data-price="99990"
+                        data-stock="true" data-offer="false" data-platform="coleccion">
+                        <div class="card bg-dark text-light h-100 border-0 shadow-lg">
+                            <img src="assets/images/productos/figura.jpeg" class="card-img-top"
+                                alt="FIGURA GREAT MAZINGER" style="height:200px; object-fit:cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">FIGURA GREAT MAZINGER Z 12\" FULL ACTION</h5>
+                                <p class="card-text small">Figura articulada de colección.</p>
+                                <p class="fw-bold text-success">$99.990</p>
+                                <div class="d-flex justify-content-between mt-auto gap-2">
+                                    <a href="#" class="btn btn-outline-info flex-grow-1">Ver Detalle</a>
+                                    <button class="btn btn-success flex-grow-1"
+                                        onclick="addToCart('FIGURA GREAT MAZINGER', 99990)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
 
             </section>
         </div>
     </main>
 
     <!-- Footer -->
-    
-<footer class="bg-dark text-light py-5 mt-5">
-    <div class="container">
-        <div class="row g-4">
-            <!-- Logo y redes -->
-            <div class="col-md-4 text-center text-md-start">
-                <img src="assets/images/logo-sin-fondo.png" alt="Logo de la tienda" class="mb-3" style="max-height:100px;">
-                <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                    <a href="#"><img src="assets/images/icon/1.png" alt="Facebook" style="max-height:24px;"></a>
-                    <a href="#"><img src="assets/images/icon/2.png" alt="Instagram" style="max-height:24px;"></a>
-                    <a href="#"><img src="assets/images/icon/3.png" alt="X" style="max-height:24px;"></a>
+
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Logo y redes -->
+                <div class="col-md-4 text-center text-md-start">
+                    <img src="assets/images/logo-sin-fondo.png" alt="Logo de la tienda" class="mb-3"
+                        style="max-height:100px;">
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="#"><img src="assets/images/icon/1.png" alt="Facebook" style="max-height:24px;"></a>
+                        <a href="#"><img src="assets/images/icon/2.png" alt="Instagram" style="max-height:24px;"></a>
+                        <a href="#"><img src="assets/images/icon/3.png" alt="X" style="max-height:24px;"></a>
+                    </div>
+                </div>
+                <!-- Contacto -->
+                <div class="col-md-4 text-center text-md-start">
+                    <h5 class="fw-bold mb-2 text-info">Contacto</h5>
+                    <p class="mb-1">📍 Av. Providencia 10225, Santiago</p>
+                    <p class="mb-1">📞 +56 9 1234 5678</p>
+                    <p class="mb-3">✉️ contacto@levelup.com</p>
+                </div>
+                <!-- Horario -->
+                <div class="col-md-4 text-center text-md-start">
+                    <h5 class="fw-bold mb-2 text-info">Horario de Atención</h5>
+                    <p class="mb-3">Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+                    <h6 class="fw-bold mb-2">Canales</h6>
+                    <p class="mb-0">WhatsApp, correo y redes sociales.</p>
                 </div>
             </div>
-            <!-- Contacto -->
-            <div class="col-md-4 text-center text-md-start">
-                <h5 class="fw-bold mb-2 text-info">Contacto</h5>
-                <p class="mb-1">📍 Av. Providencia 10225, Santiago</p>
-                <p class="mb-1">📞 +56 9 1234 5678</p>
-                <p class="mb-3">✉️ contacto@levelup.com</p>
-            </div>
-            <!-- Horario -->
-            <div class="col-md-4 text-center text-md-start">
-                <h5 class="fw-bold mb-2 text-info">Horario de Atención</h5>
-                <p class="mb-3">Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
-                <h6 class="fw-bold mb-2">Canales</h6>
-                <p class="mb-0">WhatsApp, correo y redes sociales.</p>
-            </div>
+            <hr class="border-secondary my-4">
+            <p class="text-center small mb-0">&copy; 2025 Level-Up Gamer. Todos los derechos reservados.</p>
         </div>
-        <hr class="border-secondary my-4">
-        <p class="text-center small mb-0">&copy; 2025 Level-Up Gamer. Todos los derechos reservados.</p>
-    </div>
-</footer>
+    </footer>
 
 
     <!-- Bootstrap JS -->
@@ -457,7 +482,9 @@
             updateCart();
         }
     </script>
-
+    <!--JS para los filtros-->
     <script src="assets/js/filters.js"></script>
+    
 </body>
+
 </html>

@@ -1,29 +1,73 @@
-// filters.js
-function applyFilters() {
-    const category = document.getElementById("filterCategory").value;
-    const maxPrice = document.getElementById("filterPrice").value;
-    const inStock = document.getElementById("filterStock").checked;
-    const offers = document.getElementById("filterOffers").checked;
-    const selectedPlatforms = Array.from(document.querySelectorAll("#collapsePlatform input:checked"))
-                                   .map(cb => cb.id);
+// Ejecutar cuando cargue el DOM
+document.addEventListener("DOMContentLoaded", () => {
+    const categoryFilter = document.getElementById("filterCategory");
+    const priceFilter = document.getElementById("filterPrice");
+    const stockFilter = document.getElementById("filterStock");
+    const offersFilter = document.getElementById("filterOffers");
 
-    const cards = document.querySelectorAll(".product-card");
+    // Checkboxes de plataforma
+    const platformFilters = {
+        ps5: document.getElementById("ps5"),
+        xbox: document.getElementById("xbox"),
+        switch: document.getElementById("switch"),
+        pc: document.getElementById("pc"),
+    };
 
-    cards.forEach(card => {
-        const cardCategory = card.dataset.category;
-        const cardPrice = parseInt(card.dataset.price);
-        const cardStock = card.dataset.stock === "true";
-        const cardOffer = card.dataset.offer === "true";
-        const cardPlatform = card.dataset.platform;
+    const products = document.querySelectorAll(".product-card");
 
-        let show = true;
+    // Función para aplicar filtros
+    window.applyFilters = function () {
+        const selectedCategory = categoryFilter.value;
+        const maxPrice = parseInt(priceFilter.value) || 200000;
+        const inStock = stockFilter.checked;
+        const onOffer = offersFilter.checked;
 
-        if (category && cardCategory !== category) show = false;
-        if (cardPrice > maxPrice) show = false;
-        if (inStock && !cardStock) show = false;
-        if (offers && !cardOffer) show = false;
-        if (selectedPlatforms.length > 0 && !selectedPlatforms.includes(cardPlatform)) show = false;
+        // Obtener las plataformas seleccionadas
+        const selectedPlatforms = Object.keys(platformFilters).filter(
+            (key) => platformFilters[key].checked
+        );
 
-        card.style.display = show ? "block" : "none";
+        products.forEach((product) => {
+            const category = product.dataset.category;
+            const price = parseInt(product.dataset.price);
+            const stock = product.dataset.stock === "true";
+            const offer = product.dataset.offer === "true";
+            const platform = product.dataset.platform;
+
+            let visible = true;
+
+            // Filtro de categoría
+            if (selectedCategory && category !== selectedCategory) {
+                visible = false;
+            }
+
+            // Filtro de precio máximo
+            if (price > maxPrice) {
+                visible = false;
+            }
+
+            // Filtro de stock
+            if (inStock && !stock) {
+                visible = false;
+            }
+
+            // Filtro de ofertas
+            if (onOffer && !offer) {
+                visible = false;
+            }
+
+            // Filtro de plataforma
+            if (selectedPlatforms.length > 0 && !selectedPlatforms.includes(platform)) {
+                visible = false;
+            }
+
+            // Mostrar u ocultar
+            product.style.display = visible ? "block" : "none";
+        });
+    };
+
+    // ✅ Aplicar filtros automáticamente al mover el rango de precio
+    priceFilter.addEventListener("input", () => {
+        applyFilters();
     });
-}
+});
