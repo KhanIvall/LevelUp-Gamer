@@ -89,16 +89,16 @@
                     <div class="mb-3">
                         <label for="correo" class="form-label">Correo:</label>
                         <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com">
-                        <div id="errorCorreoVacio" class="form-text text-danger d-none">* Este campo es obligatorio
-                        </div>
-                        <div id="errorCorreoValido" class="form-text text-danger d-none">* El e-mail no es válido</div>
+                        <div id="errorCorreoVacio" class="form-text" style="color: red; display: none;">* Este campo es
+                            obligatorio</div>
+                        <div id="errorCorreoValido" class="form-text" style="color: red; display: none;">* El e-mail no es válido. Sólo se permiten mails @duoc.cl, @profesor.duoc.cl o @gmail.com</div>
                     </div>
 
                     <!-- Input contraseña -->
                     <div class="mb-3">
-                        <label for="contrasenna1" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control" id="contrasenna1" placeholder="********">
-                        <div id="errorContrasennaVacia" class="form-text text-danger d-none">* Este campo es obligatorio
+                        <label for="contrasenna" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="contrasenna" placeholder="********">
+                        <div id="errorContrasennaVacia" class="form-text" style="color: red; display: none;">* Este campo es obligatorio
                         </div>
                     </div>
 
@@ -114,13 +114,12 @@
                     <!-- Botones alineados a la derecha -->
                     <div class="d-flex justify-content-end gap-2">
                         <button class="btn btn-success" onclick="iniciarSesion()">Ingresar</button>
-                        <button class="btn btn-outline-light" onclick="registrarUsuario()">Registrarse</button>
+                        <a class="btn btn-outline-light" href="registro.html">Registrarse</a>
                     </div>
 
                 </div>
             </div>
         </section>
-
 
     </main>
 
@@ -160,28 +159,16 @@
     <script>
 
         //Funciones para validar los datos ingresados
-        function validarNombre(nombre) {
-            console.log("\nSe valida el nombre ingresado.");
-
-            if (nombre == '') {
-                document.getElementById('errorNombreVacio').style.display = 'block';
-                return false;
-            } else {
-                document.getElementById('errorNombreVacio').style.display = 'none';
-                return true;
-            }
-        }
-
         function validarCorreoValido(correo) {
             console.log("\nSe valida el correo ingresado.");
-            var regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var regexCorreo = /^[a-zA-Z0-9._%+-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/;
 
-            if (!regexCorreo.test(correo)) {
-                document.getElementById('errorCorreoValido').style.display = 'block';
-                return false;
-            } else {
+            if (regexCorreo.test(correo)) {
                 document.getElementById('errorCorreoValido').style.display = 'none';
                 return true;
+            } else {
+                document.getElementById('errorCorreoValido').style.display = 'block';
+                return false;
             }
         }
 
@@ -198,7 +185,7 @@
         }
 
         function validarContrasennaVacia(contrasenna) {
-            console.log("\nSe valida que se ingrese alguna contraseña 1.");
+            console.log("\nSe valida que se ingrese alguna contraseña.");
 
             if (contrasenna == '') {
                 document.getElementById('errorContrasennaVacia').style.display = 'block';
@@ -209,51 +196,28 @@
             }
         }
 
-        function validarContrasennas(contrasenna1, contrasenna2) {
-            console.log("\nSe valida que las contraseñas coincidan.");
-
-            if (contrasenna1 !== contrasenna2) {
-                document.getElementById('errorContrasennaNoCoincide').style.display = 'block';
-                return false;
-            } else {
-                document.getElementById('errorContrasennaNoCoincide').style.display = 'none';
-                return true;
-            }
-        }
-
-
-
-        function registrarUsuario() {
+        function iniciarSesion(){
             console.log("\nSe validan datos para registrar al usuario.");
             // Obtener los valores de los campos de entrada
-            const nombre = document.getElementById('nombre').value;
             const correo = document.getElementById('correo').value;
-            const fechaCumpleannos = document.getElementById('fechaCumpleannos').value;
-            const contrasenna1 = document.getElementById('contrasenna1').value;
-            const contrasenna2 = document.getElementById('contrasenna2').value;
+            const contrasenna = document.getElementById('contrasenna').value;
+
+            validarCorreoVacio(correo);
+            validarCorreoValido(correo);
+            validarContrasennaVacia(contrasenna);
 
             //Validaciones campos ingresados
-            if (validarNombre(nombre) && validarCorreoVacio(correo) && validarCorreoValido(correo) && validarFechaCumpleannos(fechaCumpleannos) && validarContrasennaVacia(contrasenna1) && validarContrasennas(contrasenna1, contrasenna2)) {
-                console.log('Nombre:', nombre);
+            if (validarCorreoVacio(correo) && validarCorreoValido(correo) && validarContrasennaVacia(contrasenna)) {
+                console.log('Sesión iniciada correctamente:');
                 console.log('Correo:', correo);
-                console.log('Contraseña:', contrasenna1);
+                console.log('Contraseña:', contrasenna);
 
                 // Mostrar un mensaje de éxito
-                alert('Registro exitoso. ¡Bienvenido, ' + nombre + '!');
+                alert('Sesión iniciada correctamente');
             } else {
                 return;
             }
         }
-
-        //Función para limpiar los datos ingresados
-        function limpiarDatos() {
-            document.getElementById('nombre').value = '';
-            document.getElementById('correo').value = '';
-            document.getElementById('contrasenna1').value = '';
-            document.getElementById('contrasenna2').value = '';
-        }
-
-
 
     </script>
 
