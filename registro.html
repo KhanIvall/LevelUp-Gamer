@@ -7,8 +7,10 @@
     <title>Registro - Level-Up Gamer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Tu hoja de estilos personalizada (después de Bootstrap para sobrescribirlo) -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" href="assets/images/icon/favicon.png">
 </head>
 
 <body>
@@ -124,6 +126,8 @@
                     <div class="mb-3 mt-3">
                         <label for="fechaCumpleannos" class="form-label">Fecha de Nacimiento:</label>
                         <input type="date" class="form-control" id="fechaCumpleannos">
+                        <div id="errorFechaVacia" class="form-text" style="color: red; display: none;">* Este campo es
+                        obligatorio</div>
                     </div>
 
                     <!-- Tipo de usuario -->
@@ -198,35 +202,36 @@
 
     </main>
 
-    <footer class="container my-4">
-        <div class="row align-items-start">
-            <!-- Columna izquierda: logo + RRSS -->
-            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-                <!-- Logo principal -->
-                <img src="assets/images/logo-sin-fondo.png" alt="Logo de la tienda" class="mb-3"
-                    style="max-height:120px;">
-
-                <!-- Redes sociales -->
-                <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                    <a href="#"><img src="assets/images/icon/1.png" alt="Facebook" style="max-height:24px;"></a>
-                    <a href="#"><img src="assets/images/icon/2.png" alt="Instagram" style="max-height:24px;"></a>
-                    <a href="#"><img src="assets/images/icon/3.png" alt="X" style="max-height:24px;"></a>
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Logo y redes -->
+                <div class="col-md-4 text-center text-md-start">
+                    <img src="assets/images/logo-sin-fondo.png" alt="Logo de la tienda" class="mb-3"
+                        style="max-height:100px;">
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="#"><img src="assets/images/icon/1.png" alt="Facebook" style="max-height:24px;"></a>
+                        <a href="#"><img src="assets/images/icon/2.png" alt="Instagram" style="max-height:24px;"></a>
+                        <a href="#"><img src="assets/images/icon/3.png" alt="X" style="max-height:24px;"></a>
+                    </div>
+                </div>
+                <!-- Contacto -->
+                <div class="col-md-4 text-center text-md-start">
+                    <h5 class="fw-bold mb-2 text-info">Contacto</h5>
+                    <p class="mb-1">📍 Av. Providencia 10225, Santiago</p>
+                    <p class="mb-1">📞 +56 9 1234 5678</p>
+                    <p class="mb-3">✉️ contacto@levelup.com</p>
+                </div>
+                <!-- Horario -->
+                <div class="col-md-4 text-center text-md-start">
+                    <h5 class="fw-bold mb-2 text-info">Horario de Atención</h5>
+                    <p class="mb-3">Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+                    <h6 class="fw-bold mb-2">Canales</h6>
+                    <p class="mb-0">WhatsApp, correo y redes sociales.</p>
                 </div>
             </div>
-
-            <!-- Columna derecha: información -->
-            <div class="col-md-8">
-                <h5 class="fw-bold mb-2">Contacto</h5>
-                <p class="mb-1">📍 Dirección: Av. Providencia 10225, Santiago</p>
-                <p class="mb-1">📞 Teléfono: +56 9 1234 5678</p>
-                <p class="mb-3">✉️ Correo: contacto@levelup.com</p>
-
-                <h6 class="fw-bold mb-2">Horario de Atención</h6>
-                <p class="mb-3">Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
-
-                <h6 class="fw-bold mb-2">Canales de Atención</h6>
-                <p class="mb-0">Atención vía WhatsApp, correo electrónico y redes sociales.</p>
-            </div>
+            <hr class="border-secondary my-4">
+            <p class="text-center small mb-0">&copy; 2025 Level-Up Gamer. Todos los derechos reservados.</p>
         </div>
     </footer>
 
