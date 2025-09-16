@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN - Lista Productos </title>
+    <title>ADMIN - Lista Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style-admin.css" rel="stylesheet">
 </head>
@@ -96,6 +96,9 @@
                                 <input type="text" id="searchInput" class="form-control bg-dark text-light"
                                     placeholder="Buscar producto...">
                             </div>
+                            <div class="col-md-2 mb-2">
+                                <button class="btn btn-info w-100" id="searchBtn">Buscar</button>
+                            </div>
                             <div class="col-md-3 mb-2">
                                 <select id="filterCategory" class="form-select bg-dark text-light">
                                     <option value="">Todas las categorías</option>
@@ -121,153 +124,23 @@
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>GAM001</td>
-                                        <td>Cyberpunk 2077 PS5</td>
-                                        <td>Consola</td>
-                                        <td>15</td>
-                                        <td>$59.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>GAM002</td>
-                                        <td>Monopoly Edición Gamer</td>
-                                        <td>Juegos de mesa</td>
-                                        <td>25</td>
-                                        <td>$29.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>GAM003</td>
-                                        <td>Auriculares RGB Gamer Pro</td>
-                                        <td>Accesorios</td>
-                                        <td>40</td>
-                                        <td>$89.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>GAM004</td>
-                                        <td>FIFA 25 Xbox</td>
-                                        <td>Consola</td>
-                                        <td>20</td>
-                                        <td>$69.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>GAM005</td>
-                                        <td>Catan Edición Gamer</td>
-                                        <td>Juegos de mesa</td>
-                                        <td>30</td>
-                                        <td>$34.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>GAM006</td>
-                                        <td>Teclado Mecánico RGB</td>
-                                        <td>Accesorios</td>
-                                        <td>50</td>
-                                        <td>$79.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>GAM007</td>
-                                        <td>Mario Kart 9 Switch</td>
-                                        <td>Consola</td>
-                                        <td>12</td>
-                                        <td>$59.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>GAM008</td>
-                                        <td>Jenga Gamer Edition</td>
-                                        <td>Juegos de mesa</td>
-                                        <td>22</td>
-                                        <td>$19.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>GAM009</td>
-                                        <td>Mouse Gamer RGB</td>
-                                        <td>Accesorios</td>
-                                        <td>35</td>
-                                        <td>$49.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>GAM010</td>
-                                        <td>Resident Evil 9 PS5</td>
-                                        <td>Consola</td>
-                                        <td>18</td>
-                                        <td>$69.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>GAM011</td>
-                                        <td>Call of Duty 2025 Xbox</td>
-                                        <td>Consola</td>
-                                        <td>20</td>
-                                        <td>$64.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>GAM012</td>
-                                        <td>Arkham Horror Board Game</td>
-                                        <td>Juegos de mesa</td>
-                                        <td>15</td>
-                                        <td>$39.990</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-neon">Editar</button>
-                                            <button class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-
-
+                                <!-- ✅ tbody corregido -->
+                                <tbody id="productTableBody">
+                                    <!-- Aquí JS insertará los productos -->
                                 </tbody>
                             </table>
                         </div>
                     </section>
-
+                </section>
 
             </main>
         </div>
     </div>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS -->
+    <script src="assets/js/admin-agregar-producto.js"></script>
 </body>
 
 </html>
