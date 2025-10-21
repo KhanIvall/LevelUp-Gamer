@@ -5,7 +5,7 @@ function MainHeader() {
     return (
         <Navbar bg="dark" expand="lg" variant="dark">
             <Container fluid>
-                <Navbar.Brand href="">
+                <Navbar.Brand href="" className='mt-3'>
                     <img
                         src="/assets/images/logo-sin-fondo.png"
                         alt="Logo"
